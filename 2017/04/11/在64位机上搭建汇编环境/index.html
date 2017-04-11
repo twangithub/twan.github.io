@@ -87,22 +87,32 @@
 
 
 
-<meta name="description" content="一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.感谢:http://www.jianshu.com/p/f4dce0e76886https://my.oschina.net/ryaneLee/blog/638440
-在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.
-小技巧如何指定Hexo本地的启动端口1$">
+<meta name="description" content="前言在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。
+举个小栗子
+下载masm32 
+
+masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建Hexo">
-<meta property="og:url" content="http://yoursite.com/2017/04/01/搭建Hexo/index.html">
+<meta property="og:title" content="如何在64位机上学习Assembly">
+<meta property="og:url" content="http://yoursite.com/2017/04/11/在64位机上搭建汇编环境/index.html">
 <meta property="og:site_name" content="Twan's Blog">
-<meta property="og:description" content="一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.感谢:http://www.jianshu.com/p/f4dce0e76886https://my.oschina.net/ryaneLee/blog/638440
-在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.
-小技巧如何指定Hexo本地的启动端口1$">
-<meta property="og:updated_time" content="2017-04-01T03:57:35.311Z">
+<meta property="og:description" content="前言在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。
+举个小栗子
+下载masm32 
+
+masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，">
+<meta property="og:image" content="http://yoursite.com/images/asm_unfortable.png">
+<meta property="og:image" content="http://yoursite.com/images/dosboxui.png">
+<meta property="og:image" content="http://yoursite.com/images/dosboxsucce.png">
+<meta property="og:updated_time" content="2017-04-11T09:12:19.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建Hexo">
-<meta name="twitter:description" content="一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.感谢:http://www.jianshu.com/p/f4dce0e76886https://my.oschina.net/ryaneLee/blog/638440
-在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.
-小技巧如何指定Hexo本地的启动端口1$">
+<meta name="twitter:title" content="如何在64位机上学习Assembly">
+<meta name="twitter:description" content="前言在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。
+举个小栗子
+下载masm32 
+
+masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，">
+<meta name="twitter:image" content="http://yoursite.com/images/asm_unfortable.png">
 
 
 
@@ -130,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/01/搭建Hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/11/在64位机上搭建汇编环境/"/>
 
 
 
 
 
-  <title> 搭建Hexo | Twan's Blog </title>
+  <title> 如何在64位机上学习Assembly | Twan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/01/搭建Hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/在64位机上搭建汇编环境/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Twan">
@@ -276,7 +286,7 @@
             
             
               
-                搭建Hexo
+                如何在64位机上学习Assembly
               
             
           </h1>
@@ -291,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T15:01:58+08:00">
-                2017-04-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T16:57:57+08:00">
+                2017-04-11
               </time>
             
 
@@ -311,8 +321,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/01/搭建Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/01/搭建Hexo/" itemprop="commentsCount"></span>
+                <a href="/2017/04/11/在64位机上搭建汇编环境/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/11/在64位机上搭建汇编环境/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -339,10 +349,52 @@
       
 
       
-        <p>一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.<br><br><br><strong>感谢</strong>:<br><br><a href="http://www.jianshu.com/p/f4dce0e76886" target="_blank" rel="external">http://www.jianshu.com/p/f4dce0e76886</a><br><br><a href="https://my.oschina.net/ryaneLee/blog/638440" target="_blank" rel="external">https://my.oschina.net/ryaneLee/blog/638440</a><br></p>
-<p>在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.</p>
-<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="如何指定Hexo本地的启动端口"><a href="#如何指定Hexo本地的启动端口" class="headerlink" title="如何指定Hexo本地的启动端口"></a>如何指定Hexo本地的启动端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p 5000</div></pre></td></tr></table></figure>
-<h3 id="如何快速提交本地到github"><a href="#如何快速提交本地到github" class="headerlink" title="如何快速提交本地到github"></a>如何快速提交本地到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g</div></pre></td></tr></table></figure>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。<br>而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。<br>工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。</p>
+<h2 id="举个小栗子"><a href="#举个小栗子" class="headerlink" title="举个小栗子"></a>举个小栗子</h2><blockquote>
+<p>下载masm32 </p>
+</blockquote>
+<p>masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，这个比较经典，<br>当然现在也有新的版本，去谷歌随便搜一个，满大街都是。</p>
+<p>下载后默认解压在D根目录，比如 D:\masm<br>下面我们通过编译一个简单的asm小例子：</p>
+<pre><code>assume cs:codesg
+codesg segment
+
+    mov ax,0123h
+    mov bx,0456h
+    add ax,bx
+    add ax,ax
+
+    mov ax ,4c00h
+    int 21h
+
+codesg ends
+end
+</code></pre><p>保存为1.asm，为方便起见，直接放在 D:\masm\1.asm</p>
+<blockquote>
+<p>编译1.asm</p>
+</blockquote>
+<p>在cmd里cd到D:\masm</p>
+<pre><code>D:\masm&gt; masm 1.asm
+</code></pre><p>当我们执行这条命令时，在64位机上弹出图：<br><img src="/images/asm_unfortable.png"></p>
+<p><strong>这表明，64机不支持汇编的编译。</strong><br>你肯定会说安装个虚拟机啊，还不怕弄坏系统。或者mac行吗？<br>由于硬件的发展，64位的电脑已经很普遍了，当然装个vm也无伤大雅咯。<br>至于mac，愿意折腾的，你可试试，很麻烦。</p>
+<h2 id="使用DOSBox"><a href="#使用DOSBox" class="headerlink" title="使用DOSBox"></a>使用DOSBox</h2><p>DosBox已经停止维护,最新版本依然是0.7.4 。不过不影响使用，在64位win平台都通过运行。</p>
+<blockquote>
+<p>配置dosbox</p>
+</blockquote>
+<p>下载安装一路next。完成后再安装目录里双击 DOSBox 0.74 Options.bat ，会打开一个conf文件。<br>在该文件的结尾处 [autoexec] 后面添加之前的masm路径 ， 即 D:\masm</p>
+<pre><code>MOUNT C D:\masm
+set PATH=$PATH$;D:\masm
+</code></pre><blockquote>
+<p>dosbox的使用</p>
+</blockquote>
+<p>双击安装的dosbox图标，系统打开了两个窗口，关闭任何一个另一个都会关闭。我们只关心dosbox，另一个不用管。<br>打开如图所示：<br><img src="/images/dosboxui.png"></p>
+<pre><code>MOUNT C D:\masm
+</code></pre><p>即表示将D:\masm 挂载为C盘，那么用的时候执行 C: 后即可执行dos命令 </p>
+<blockquote>
+<p>完成</p>
+</blockquote>
+<p>现在我们可以使用一些编译的常用命令了。<br>比如之前的 masm 1.asm ，以及 link 1.asm ， debug 等高级命令<br>配一张成功的截图：<br><img src="/images/dosboxsucce.png"></p>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>在下一节为大家介绍汇编的概览知识，引导入门。<br>推荐书籍：王爽出版的《汇编语言》</p>
+
       
     </div>
 
@@ -378,15 +430,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/06/Android 6.0 7.0 root权限获取/" rel="next" title="Android 6.0+ root权限获取">
+                <i class="fa fa-chevron-left"></i> Android 6.0+ root权限获取
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/06/Android 6.0 7.0 root权限获取/" rel="prev" title="Android 6.0+ root权限获取">
-                Android 6.0+ root权限获取 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -528,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#小技巧"><span class="nav-number">1.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何指定Hexo本地的启动端口"><span class="nav-number">1.1.</span> <span class="nav-text">如何指定Hexo本地的启动端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何快速提交本地到github"><span class="nav-number">1.2.</span> <span class="nav-text">如何快速提交本地到github</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举个小栗子"><span class="nav-number">2.</span> <span class="nav-text">举个小栗子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用DOSBox"><span class="nav-number">3.</span> <span class="nav-text">使用DOSBox</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">3.1.</span> <span class="nav-text">结束语</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -674,7 +726,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 89055, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 89055, xid: "2017/04/01/搭建Hexo/"});
+		_hcwp.push({widget:"Stream", widget_id: 89055, xid: "2017/04/11/在64位机上搭建汇编环境/"});
 		
 
 		(function() {
