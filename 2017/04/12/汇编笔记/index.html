@@ -87,32 +87,22 @@
 
 
 
-<meta name="description" content="前言在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。
-举个小栗子
-下载masm32 
-
-masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，">
+<meta name="description" content="王爽的汇编语言走马观花的看了几遍了，学这个完全是兴趣驱动，由于工作上完全接触不到汇编，几乎就是边学边忘。但是了解汇编又是这么重要，这次我决定每看完一章把自己的所思所得记录下来，以便以后能快速的捡起来。不管怎么说，学完汇编还是可以玩玩crack。
+第一章 基础知识
+机器指令和汇编指令是一一对应的，比如：机器码：            10100001 00000011 00000000对应的汇编指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何在64位机上学习Assembly">
-<meta property="og:url" content="http://yoursite.com/2017/04/11/在64位机上搭建汇编环境/index.html">
+<meta property="og:title" content="王爽汇编笔记">
+<meta property="og:url" content="http://yoursite.com/2017/04/12/汇编笔记/index.html">
 <meta property="og:site_name" content="Twan's Blog">
-<meta property="og:description" content="前言在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。
-举个小栗子
-下载masm32 
-
-masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，">
-<meta property="og:image" content="http://yoursite.com/images/asm_unfortable.png">
-<meta property="og:image" content="http://yoursite.com/images/dosboxui.png">
-<meta property="og:image" content="http://yoursite.com/images/dosboxsucce.png">
-<meta property="og:updated_time" content="2017-04-11T09:12:19.619Z">
+<meta property="og:description" content="王爽的汇编语言走马观花的看了几遍了，学这个完全是兴趣驱动，由于工作上完全接触不到汇编，几乎就是边学边忘。但是了解汇编又是这么重要，这次我决定每看完一章把自己的所思所得记录下来，以便以后能快速的捡起来。不管怎么说，学完汇编还是可以玩玩crack。
+第一章 基础知识
+机器指令和汇编指令是一一对应的，比如：机器码：            10100001 00000011 00000000对应的汇编指令">
+<meta property="og:updated_time" content="2017-04-12T09:50:43.575Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何在64位机上学习Assembly">
-<meta name="twitter:description" content="前言在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。
-举个小栗子
-下载masm32 
-
-masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，">
-<meta name="twitter:image" content="http://yoursite.com/images/asm_unfortable.png">
+<meta name="twitter:title" content="王爽汇编笔记">
+<meta name="twitter:description" content="王爽的汇编语言走马观花的看了几遍了，学这个完全是兴趣驱动，由于工作上完全接触不到汇编，几乎就是边学边忘。但是了解汇编又是这么重要，这次我决定每看完一章把自己的所思所得记录下来，以便以后能快速的捡起来。不管怎么说，学完汇编还是可以玩玩crack。
+第一章 基础知识
+机器指令和汇编指令是一一对应的，比如：机器码：            10100001 00000011 00000000对应的汇编指令">
 
 
 
@@ -140,13 +130,13 @@ masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/11/在64位机上搭建汇编环境/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/12/汇编笔记/"/>
 
 
 
 
 
-  <title> 如何在64位机上学习Assembly | Twan's Blog </title>
+  <title> 王爽汇编笔记 | Twan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +255,7 @@ masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/在64位机上搭建汇编环境/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/12/汇编笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Twan">
@@ -286,7 +276,7 @@ masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等
             
             
               
-                如何在64位机上学习Assembly
+                王爽汇编笔记
               
             
           </h1>
@@ -301,8 +291,8 @@ masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T16:57:57+08:00">
-                2017-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T12:23:46+08:00">
+                2017-04-12
               </time>
             
 
@@ -321,8 +311,8 @@ masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/11/在64位机上搭建汇编环境/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/11/在64位机上搭建汇编环境/" itemprop="commentsCount"></span>
+                <a href="/2017/04/12/汇编笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/12/汇编笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -349,51 +339,34 @@ masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在windows 32位机上学习汇编由于自带debug.exe程序的支持，所以编译asm比较顺利。<br>而在64位机上却没有这个程序，那怎么办，是不是要装个虚拟机呢，感觉挺麻烦。<br>工欲善其事必先利其器，还没开始学就被复杂的环境吓到真是让人沮丧。</p>
-<h2 id="举个小栗子"><a href="#举个小栗子" class="headerlink" title="举个小栗子"></a>举个小栗子</h2><blockquote>
-<p>下载masm32 </p>
-</blockquote>
-<p>masm是常用的编译汇编的工具，里面自带debug，link，masm，lib等执行文件。我们就用masm 5.0的版本吧，这个比较经典，<br>当然现在也有新的版本，去谷歌随便搜一个，满大街都是。</p>
-<p>下载后默认解压在D根目录，比如 D:\masm<br>下面我们通过编译一个简单的asm小例子：</p>
-<pre><code>assume cs:codesg
-codesg segment
-
-    mov ax,0123h
-    mov bx,0456h
-    add ax,bx
-    add ax,ax
-
-    mov ax ,4c00h
-    int 21h
-
-codesg ends
-end
-</code></pre><p>保存为1.asm，为方便起见，直接放在 D:\masm\1.asm</p>
-<blockquote>
-<p>编译1.asm</p>
-</blockquote>
-<p>在cmd里cd到D:\masm</p>
-<pre><code>D:\masm&gt; masm 1.asm
-</code></pre><p>当我们执行这条命令时，在64位机上弹出图：<br><img src="/images/asm_unfortable.png"></p>
-<p><strong>这表明，64机不支持汇编的编译。</strong><br>你肯定会说安装个虚拟机啊，还不怕弄坏系统。或者mac行吗？<br>由于硬件的发展，64位的电脑已经很普遍了，当然装个vm也无伤大雅咯。<br>至于mac，愿意折腾的，你可试试，很麻烦。</p>
-<h2 id="使用DOSBox"><a href="#使用DOSBox" class="headerlink" title="使用DOSBox"></a>使用DOSBox</h2><p>DosBox已经停止维护,最新版本依然是0.7.4 。不过不影响使用，在64位win平台都通过运行。</p>
-<blockquote>
-<p>配置dosbox</p>
-</blockquote>
-<p>下载安装一路next。完成后再安装目录里双击 DOSBox 0.74 Options.bat ，会打开一个conf文件。<br>在该文件的结尾处 [autoexec] 后面添加之前的masm路径 ， 即 D:\masm</p>
-<pre><code>MOUNT C D:\masm
-set PATH=$PATH$;D:\masm
-</code></pre><blockquote>
-<p>dosbox的使用</p>
-</blockquote>
-<p>双击安装的dosbox图标，系统打开了两个窗口，关闭任何一个另一个都会关闭。我们只关心dosbox，另一个不用管。<br>打开如图所示：<br><img src="/images/dosboxui.png"></p>
-<pre><code>MOUNT C D:\masm
-</code></pre><p>即表示将D:\masm 挂载为C盘，那么用的时候执行 C: 后即可执行dos命令 </p>
-<blockquote>
-<p>完成</p>
-</blockquote>
-<p>现在我们可以使用一些编译的常用命令了。<br>比如之前的 masm 1.asm ，以及 link 1.asm ， debug 等高级命令<br>配一张成功的截图：<br><img src="/images/dosboxsucce.png"></p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>在下一节为大家介绍汇编的概览知识，引导入门。<br>推荐书籍：王爽出版的《汇编语言》</p>
+        <p>王爽的汇编语言走马观花的看了几遍了，学这个完全是兴趣驱动，由于工作上完全接触不到汇编，几乎就是边学边忘。<br>但是了解汇编又是这么重要，这次我决定每看完一章把自己的所思所得记录下来，以便以后能快速的捡起来。<br>不管怎么说，学完汇编还是可以玩玩crack。</p>
+<h2 id="第一章-基础知识"><a href="#第一章-基础知识" class="headerlink" title="第一章 基础知识"></a>第一章 基础知识</h2><ol>
+<li><p>机器指令和汇编指令是一一对应的，比如：<br>机器码：            10100001 00000011 00000000<br>对应的汇编指令：   MOV AX,[3]<br>含义：            传送3号单元的内容放入AX</p>
+</li>
+<li><p>不同的cpu对应不同的汇编指令集</p>
+</li>
+<li>存储器的存储单元是从0开始编号的</li>
+<li>一个存储单元有8位，即一个字节</li>
+<li>1Byte=8bit 1KB=1024B 1MB=1024KB</li>
+<li><p>CPU控制着一切的芯片（各种存储器），那么CPU是如何沟通芯片呢？<br>存储单元的地址（地址信息）                –地址总线<br>器件的选择，读或写的命令（控制信息）        –控制总线<br>读或写的数据（数据信息）                –数据总线</p>
+<p>假设一个cpu有10根地址总线，我们知道一根线用1或0表示，那么10根就是2的10方，<br>即只能寻址到0-1023</p>
+<p>80386cpu的地址总线宽度为32，则内存地址空间为4G。<br>这也说明以前用的xp系统内存最大为4G，多了都是浪费，因为xp都是32位的。</p>
+</li>
+<li><p>RAM：随机存储器，必须带电存储<br>ROM：只读存储器，关机后数据依然存在</p>
+</li>
+<li><p>cpu把连接的各存储器件当作内存对待，把他们总的看作一个由若干存储单元组成的逻辑存储器，<br>这就是我们所说的内存地址空间，汇编面对的就是内存地址空间。</p>
+</li>
+</ol>
+<h2 id="第二章-寄存器"><a href="#第二章-寄存器" class="headerlink" title="第二章 寄存器"></a>第二章 寄存器</h2><ol>
+<li><p>8086cpu有14个寄存器，AX,BX,CX,DX,SI,DI,SP,BP,IP,CS,SS,DS,ES,PSW.<br>其中每个寄存器都是16位的,即2个字节或说1个字</p>
+</li>
+<li><p>其中AX,BX,CX,DX称为通用寄存器。以AX为例， 左8位为低8位（AL），右8位为高8位（AH）</p>
+</li>
+<li><p>物理地址=基础地址x16+偏移地址<br>注意这里的16是十进制，对应的16进制是10H。</p>
+<p>物理地址为什么要用这种基地址+偏移地址的表示法？<br>是这样的，比如一个四位数，我怎么样用两张只能表示3位数的纸条表达呢。<br>所以汇编采用了一个3位数x16+另一个3位数 = 一个四位数的表示法。</p>
+<p>汇编用这种表示法其实是有道理的，8086cpu 有20根地址总线，而他是16位架构的cpu，一次最多只能传输16位的地址，<br>为了能访问2的20次方的地址长度，就出现了这种物理地址的表示法。当然地址的解析是内部的地址加法器完成。</p>
+</li>
+</ol>
 
       
     </div>
@@ -430,8 +403,8 @@ set PATH=$PATH$;D:\masm
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/06/Android 6.0 7.0 root权限获取/" rel="next" title="Android 6.0+ root权限获取">
-                <i class="fa fa-chevron-left"></i> Android 6.0+ root权限获取
+              <a href="/2017/04/11/在64位机上搭建汇编环境/" rel="next" title="如何在64位机上学习Assembly">
+                <i class="fa fa-chevron-left"></i> 如何在64位机上学习Assembly
               </a>
             
           </div>
@@ -439,10 +412,6 @@ set PATH=$PATH$;D:\masm
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/12/汇编笔记/" rel="prev" title="王爽汇编笔记">
-                王爽汇编笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,7 +553,7 @@ set PATH=$PATH$;D:\masm
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举个小栗子"><span class="nav-number">2.</span> <span class="nav-text">举个小栗子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用DOSBox"><span class="nav-number">3.</span> <span class="nav-text">使用DOSBox</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">3.1.</span> <span class="nav-text">结束语</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-基础知识"><span class="nav-number">1.</span> <span class="nav-text">第一章 基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-寄存器"><span class="nav-number">2.</span> <span class="nav-text">第二章 寄存器</span></a></li></ol></div>
             
 
           </div>
@@ -730,7 +699,7 @@ set PATH=$PATH$;D:\masm
 		_hcwp.push({widget:"Bloggerstream", widget_id: 89055, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 89055, xid: "2017/04/11/在64位机上搭建汇编环境/"});
+		_hcwp.push({widget:"Stream", widget_id: 89055, xid: "2017/04/12/汇编笔记/"});
 		
 
 		(function() {
