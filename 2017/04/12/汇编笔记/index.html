@@ -89,13 +89,13 @@
 
 <meta name="description" content="王爽的汇编语言走马观花的看了几遍了，学这个完全是兴趣驱动，记得以前用C++ Builder 编写C++时，每次报错时，弹出一个cpu窗口，满屏的汇编，看得头皮发麻。当时就在想，弹这个窗口给我调试？Are you kidding me。由于当时工作上也需要一点点汇编，但还是边学边忘，主要是太抽象。但是了解汇编又是这么重要，这次我决定每看完一章把自己的所思所得记录下来，以便以后能快速的捡起来。不管怎么">
 <meta property="og:type" content="article">
-<meta property="og:title" content="王爽汇编笔记">
+<meta property="og:title" content="王爽汇编笔记(1)">
 <meta property="og:url" content="http://yoursite.com/2017/04/12/汇编笔记/index.html">
 <meta property="og:site_name" content="Twan's Blog">
 <meta property="og:description" content="王爽的汇编语言走马观花的看了几遍了，学这个完全是兴趣驱动，记得以前用C++ Builder 编写C++时，每次报错时，弹出一个cpu窗口，满屏的汇编，看得头皮发麻。当时就在想，弹这个窗口给我调试？Are you kidding me。由于当时工作上也需要一点点汇编，但还是边学边忘，主要是太抽象。但是了解汇编又是这么重要，这次我决定每看完一章把自己的所思所得记录下来，以便以后能快速的捡起来。不管怎么">
-<meta property="og:updated_time" content="2017-04-12T09:57:28.888Z">
+<meta property="og:updated_time" content="2017-04-13T02:34:49.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王爽汇编笔记">
+<meta name="twitter:title" content="王爽汇编笔记(1)">
 <meta name="twitter:description" content="王爽的汇编语言走马观花的看了几遍了，学这个完全是兴趣驱动，记得以前用C++ Builder 编写C++时，每次报错时，弹出一个cpu窗口，满屏的汇编，看得头皮发麻。当时就在想，弹这个窗口给我调试？Are you kidding me。由于当时工作上也需要一点点汇编，但还是边学边忘，主要是太抽象。但是了解汇编又是这么重要，这次我决定每看完一章把自己的所思所得记录下来，以便以后能快速的捡起来。不管怎么">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title> 王爽汇编笔记 | Twan's Blog </title>
+  <title> 王爽汇编笔记(1) | Twan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +270,7 @@
             
             
               
-                王爽汇编笔记
+                王爽汇编笔记(1)
               
             
           </h1>
@@ -356,10 +356,45 @@
 </li>
 <li><p>其中AX,BX,CX,DX称为通用寄存器。以AX为例， 左8位为低8位（AL），右8位为高8位（AH）</p>
 </li>
-<li><p>物理地址=基础地址x16+偏移地址<br>注意这里的16是十进制，对应的16进制是10H。</p>
+<li><p>物理地址=基础地址（段地址（SA）x16）+偏移地址(EA)<br>注意这里的16是十进制，对应的16进制是10H。</p>
 <p>物理地址为什么要用这种基地址+偏移地址的表示法？<br>是这样的，比如一个四位数，我怎么样用两张只能表示3位数的纸条表达呢。<br>所以汇编采用了一个3位数x16+另一个3位数 = 一个四位数的表示法。</p>
 <p>汇编用这种表示法其实是有道理的，8086cpu 有20根地址总线，而他是16位架构的cpu，一次最多只能传输16位的地址，<br>为了能访问2的20次方的地址长度，就出现了这种物理地址的表示法。当然地址的解析是内部的地址加法器完成。</p>
 </li>
+<li><p>将若干地址连续的内存单元看作一个段。<br>那么段地址的起始地址就是基础地址。注意起始地址必是16的倍数，如果偏移地址是16位，那么最大寻址就是64KB</p>
+</li>
+</ol>
+<h3 id="各个寄存器一览"><a href="#各个寄存器一览" class="headerlink" title="各个寄存器一览"></a>各个寄存器一览</h3><p>8086  CPU 中寄存器总共为 14 个，且均为 16 位 。<br>即 AX，BX，CX，DX，SP，BP，SI，DI，IP，FLAG，CS，DS，SS，ES 共 14 个。<br>而这 14 个寄存器按照一定方式又分为了通用寄存器，控制寄存器和段寄存器。</p>
+<blockquote>
+<p>通用寄存器：</p>
+</blockquote>
+<p>AX，BX，CX，DX 称作为数据寄存器：</p>
+<p>AX (Accumulator)：累加寄存器，也称之为累加器；<br>BX (Base)：基地址寄存器；<br>CX (Count)：计数器寄存器；<br>DX (Data)：数据寄存器；<br>SP 和 BP 又称作为指针寄存器：<br>SP (Stack Pointer)：堆栈指针寄存器；<br>BP (Base Pointer)：基指针寄存器；<br>SI 和 DI 又称作为变址寄存器：<br>SI (Source Index)：源变址寄存器；<br>DI (Destination Index)：目的变址寄存器；</p>
+<blockquote>
+<p>控制寄存器：</p>
+</blockquote>
+<p>IP (Instruction Pointer)：指令指针寄存器；<br>FLAG：标志寄存器；</p>
+<blockquote>
+<p>段寄存器：</p>
+</blockquote>
+<p>CS (Code Segment)：代码段寄存器；<br>DS (Data Segment)：数据段寄存器；<br>SS (Stack Segment)：堆栈段寄存器；<br>ES (Extra Segment)：附加段寄存器；</p>
+<h3 id="CS-和-IP"><a href="#CS-和-IP" class="headerlink" title="CS 和 IP"></a>CS 和 IP</h3><p>CS和IP指示了CPU当前要读取指令的地址。<br>即任意时刻，CPU将CS：IP指向的内容当做指令执行。</p>
+<p>注意这句话的另一层含义，在内存中，指令和数据都是二进制，那CPU怎么知道内存中哪些是指令哪些是数据呢？<br>答案自然是凡是被CS：IP指向过的都当作指令执行。</p>
+<p>CPU工作过程：<br>（1） 从CS：IP指向的内存单元读取指令，读取的指令进入指令缓冲器；<br>（2） IP=IP+所读取的指令长度，从而指向下一条指令；<br>（3） 执行指令。转到步骤（1），重复执行。</p>
+<blockquote>
+<p>如何修改CS和IP</p>
+</blockquote>
+<p>  在8086CPU中，程序员是无法直接通过比如mov等指令来修改cs和ip。而是：<br>  jmp 段地址：偏移地址<br>  jmp 某一合法的寄存器</p>
+<p>  能够修改cs和ip的都叫转移指令</p>
+<blockquote>
+<p>Debug常用命令</p>
+</blockquote>
+<ol>
+<li>用Debug的R命令查看、改变CPU寄存器的内容</li>
+<li>用Debug的D命令查看内存中的内容</li>
+<li>用Debug的E命令改写内存中的内容</li>
+<li>用Debug的U命令将内存中的机器指令翻译成汇编指令</li>
+<li>用Debug的T命令执行一条机器指令</li>
+<li>用Debug的A命令以汇编指令的格式在内存中写入一条机器指令</li>
 </ol>
 
       
@@ -547,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-基础知识"><span class="nav-number">1.</span> <span class="nav-text">第一章 基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-寄存器"><span class="nav-number">2.</span> <span class="nav-text">第二章 寄存器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-基础知识"><span class="nav-number">1.</span> <span class="nav-text">第一章 基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-寄存器"><span class="nav-number">2.</span> <span class="nav-text">第二章 寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#各个寄存器一览"><span class="nav-number">2.1.</span> <span class="nav-text">各个寄存器一览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CS-和-IP"><span class="nav-number">2.2.</span> <span class="nav-text">CS 和 IP</span></a></li></ol></li></ol></div>
             
 
           </div>
