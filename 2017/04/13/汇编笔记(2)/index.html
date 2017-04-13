@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,搭建Hexo," />
+  <meta name="keywords" content="汇编,asm,assmbly," />
 
 
 
@@ -87,22 +87,27 @@
 
 
 
-<meta name="description" content="一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.感谢:http://www.jianshu.com/p/f4dce0e76886https://my.oschina.net/ryaneLee/blog/638440
-在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.
-小技巧如何指定Hexo本地的启动端口1$">
+<meta name="description" content="第三章 寄存器(内存访问)
+内存中字的存储
+
+   N地址字单元(占2个字节)表示法:比如   那么2地址字单元就是 0012H.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建Hexo">
-<meta property="og:url" content="http://yoursite.com/2017/04/01/搭建Hexo/index.html">
+<meta property="og:title" content="王爽汇编笔记(2)">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/汇编笔记(2)/index.html">
 <meta property="og:site_name" content="Twan's Blog">
-<meta property="og:description" content="一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.感谢:http://www.jianshu.com/p/f4dce0e76886https://my.oschina.net/ryaneLee/blog/638440
-在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.
-小技巧如何指定Hexo本地的启动端口1$">
-<meta property="og:updated_time" content="2017-04-13T03:43:52.643Z">
+<meta property="og:description" content="第三章 寄存器(内存访问)
+内存中字的存储
+
+   N地址字单元(占2个字节)表示法:比如   那么2地址字单元就是 0012H.">
+<meta property="og:image" content="http://yoursite.com/images/内存中字的存储.png">
+<meta property="og:updated_time" content="2017-04-13T10:12:56.372Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建Hexo">
-<meta name="twitter:description" content="一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.感谢:http://www.jianshu.com/p/f4dce0e76886https://my.oschina.net/ryaneLee/blog/638440
-在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.
-小技巧如何指定Hexo本地的启动端口1$">
+<meta name="twitter:title" content="王爽汇编笔记(2)">
+<meta name="twitter:description" content="第三章 寄存器(内存访问)
+内存中字的存储
+
+   N地址字单元(占2个字节)表示法:比如   那么2地址字单元就是 0012H.">
+<meta name="twitter:image" content="http://yoursite.com/images/内存中字的存储.png">
 
 
 
@@ -130,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/01/搭建Hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/13/汇编笔记(2)/"/>
 
 
 
 
 
-  <title> 搭建Hexo | Twan's Blog </title>
+  <title> 王爽汇编笔记(2) | Twan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/01/搭建Hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/汇编笔记(2)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Twan">
@@ -276,7 +281,7 @@
             
             
               
-                搭建Hexo
+                王爽汇编笔记(2)
               
             
           </h1>
@@ -291,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T15:01:58+08:00">
-                2017-04-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-13T18:07:31+08:00">
+                2017-04-13
               </time>
             
 
@@ -311,8 +316,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/01/搭建Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/01/搭建Hexo/" itemprop="commentsCount"></span>
+                <a href="/2017/04/13/汇编笔记(2)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/13/汇编笔记(2)/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -339,10 +344,11 @@
       
 
       
-        <p>一直想搭建自己的博客,近期发现Hexo+NexT组合越来越流行. 于是自己也动手做了一个.<br><br><br><strong>感谢</strong>:<br><br><a href="http://www.jianshu.com/p/f4dce0e76886" target="_blank" rel="external">http://www.jianshu.com/p/f4dce0e76886</a><br><br><a href="https://my.oschina.net/ryaneLee/blog/638440" target="_blank" rel="external">https://my.oschina.net/ryaneLee/blog/638440</a><br></p>
-<p>在环境搭建上参考了第一篇文章,在域名的设置上参考了第二篇文章.这两篇文章让我一路顺畅,没踩到任何坑.</p>
-<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="如何指定Hexo本地的启动端口"><a href="#如何指定Hexo本地的启动端口" class="headerlink" title="如何指定Hexo本地的启动端口"></a>如何指定Hexo本地的启动端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p 5000</div></pre></td></tr></table></figure>
-<h3 id="如何快速提交本地到github"><a href="#如何快速提交本地到github" class="headerlink" title="如何快速提交本地到github"></a>如何快速提交本地到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g</div></pre></td></tr></table></figure>
+        <h2 id="第三章-寄存器-内存访问"><a href="#第三章-寄存器-内存访问" class="headerlink" title="第三章 寄存器(内存访问)"></a>第三章 寄存器(内存访问)</h2><blockquote>
+<p>内存中字的存储</p>
+</blockquote>
+<p>   N地址字单元(占2个字节)表示法:比如<img src="/images/内存中字的存储.png"><br>   那么2地址字单元就是 0012H.</p>
+
       
     </div>
 
@@ -371,9 +377,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/汇编/" rel="tag"># 汇编</a>
           
-            <a href="/tags/搭建Hexo/" rel="tag"># 搭建Hexo</a>
+            <a href="/tags/asm/" rel="tag"># asm</a>
+          
+            <a href="/tags/assmbly/" rel="tag"># assmbly</a>
           
         </div>
       
@@ -386,15 +394,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/12/汇编笔记(1)/" rel="next" title="王爽汇编笔记(1)">
+                <i class="fa fa-chevron-left"></i> 王爽汇编笔记(1)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/06/Android 6.0 7.0 root权限获取/" rel="prev" title="Android 6.0+ root权限获取">
-                Android 6.0+ root权限获取 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -545,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#小技巧"><span class="nav-number">1.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何指定Hexo本地的启动端口"><span class="nav-number">1.1.</span> <span class="nav-text">如何指定Hexo本地的启动端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何快速提交本地到github"><span class="nav-number">1.2.</span> <span class="nav-text">如何快速提交本地到github</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-寄存器-内存访问"><span class="nav-number">1.</span> <span class="nav-text">第三章 寄存器(内存访问)</span></a></li></ol></div>
             
 
           </div>
@@ -691,7 +699,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 89055, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 89055, xid: "2017/04/01/搭建Hexo/"});
+		_hcwp.push({widget:"Stream", widget_id: 89055, xid: "2017/04/13/汇编笔记(2)/"});
 		
 
 		(function() {
